@@ -2,11 +2,6 @@
 
 using namespace std;
 
-void swap(int& x, int& y) {
-  int temp = x;
-  x = y;
-  y = temp;
-}
 
 int main() {
   int firstNum = 10;
@@ -21,6 +16,12 @@ int main() {
   cout << firstNum << ", " << secondNum << "\n";
 
   return 0;
+}
+
+void swap(int& x, int& y) {
+  int temp = x;
+  x = y;
+  y = temp;
 }
 
 /*

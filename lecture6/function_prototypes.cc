@@ -6,9 +6,9 @@ double computeAverage(int[], int);
 double computeAverage(double[], int);
 
 int main() {
-	int array[] = {3, 4, 5};
+	int array[] = {3, 4, 6};
 	cout << "Arithmentic mean: " << computeAverage(array, 3) << endl;
-	double dArray[] = {3.0, 4.0, 5.0};
+	double dArray[] = {3.0, 4.0, 6.5};
 	cout << computeAverage(dArray, 3) << endl;
 	return 0;
 }
