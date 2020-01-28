@@ -14,4 +14,5 @@ class Rectangle {
     int area();
 };
 // TODO: Add constructor and destructor
+// TODO: View static value publically and then mkae private and add public accessor function
 #endif
