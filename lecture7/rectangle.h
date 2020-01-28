@@ -9,9 +9,9 @@ class Rectangle {
     int width;
     int height;
     static int numRectangles;
-    public:
+  public:
     void setSides(int width, int height);
     int area();
 };
-
+// TODO: Add constructor and destructor
 #endif
