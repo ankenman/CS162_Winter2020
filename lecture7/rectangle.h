@@ -8,11 +8,12 @@ using namespace std;
 class Rectangle {
     int width;
     int height;
-    static int numRectangles;
   public:
+    static int numRectangles;
+    Rectangle(int w, int h);
+    ~Rectangle();
     void setSides(int width, int height);
-    int area();
+    int getArea();
 };
-// TODO: Add constructor and destructor
-// TODO: View static value publically and then mkae private and add public accessor function
+// TODO: Make numRectangles private and add public accessor function
 #endif
