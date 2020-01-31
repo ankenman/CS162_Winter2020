@@ -4,6 +4,7 @@
 
 using namespace std;
 
+// Abstract base class
 class Shape {
     public:
         virtual double getArea() = 0;
@@ -31,7 +32,7 @@ class Circle: public Shape {
 class Rectangle: public Shape {
     protected:
     public:
-        double length, width;
+        double length, width; // Moved these to public for demo purposes, move back to protected or private
         Rectangle(double length, double width) {
             this->length = length;
             this->width = width;
@@ -50,9 +51,13 @@ class Rectangle: public Shape {
         }
 };
 
+// Inheritance that violates the Liskov Substitution Principle
+// Suggestion: Square should inherit from Shape. In terms of
+// Geometry Square does extend from Rectangle, but not 
+// necessarily true in programming.
 class Square: public Rectangle {
     public:
-        Square(double sideLength) :Rectangle(sideLength, sideLength) {
+        Square(double sideLength) : Rectangle(sideLength, sideLength) {
         }
         void setLength(double sideLength) {
             this->length = sideLength;
@@ -72,9 +77,10 @@ int main() {
     cout << "r->getPerimeter(): " << r->getPerimeter() << endl;
     cout << "r->getArea(): " << r->getArea() << endl;
     
+    // Contrived example. Pretend this is code that depends on width not changing 
+    // when we change length. 
     double length = r->length;
     double width = r ->width;
-
     r->setLength(4);
     assert(width == r->width);
 
