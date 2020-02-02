@@ -21,7 +21,7 @@ void printArrayElements(const int array[], int size) {
 // This function decrements the odd-positioned elements
 // in the given array (e.g., elements 1, 3, 5, ...).
 // For instance, if the input is {1, 2, 3, 4}
-// array would be changed to {1, 3, 3, 5} after
+// array would be changed to {1, 1, 3, 3} after
 // the function has finished.
 void decrementOddElements(int array[], int size) {
     // TODO: implement this function
