@@ -93,8 +93,8 @@ int main() {
     m = Midterm(465.89);
     cout << "Expected 465.89 and got: " << m.getScore() << endl;
 
-    /*** Test printVowelCount ***/
-    cout << "\n*******************\nTesting printVowelCount\n";
+    /*** Test print_abc_count ***/
+    cout << "\n*******************\nTesting print_abc_count\n";
     cout << "input string: aabbbbbcccc\n";
     cout << "Expected a: 2, b: 5, c:4, got: ";
     print_abc_count("aabbbbbcccc");
