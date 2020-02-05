@@ -1,0 +1,270 @@
+﻿These questions should take about an hour. This will be a third of the value of the midterm exam. Please try to do these questions before Tuesday’s lecture and we can cover any questions during the review.
+
+
+1. Write a loop to increment the odd-positioned elements of an int array a of size size by one. For instance, if a was declared as int a[] = {3, 5, 6, 8} and size was 4, at the end of the loop a would be {3, 6, 6, 9}. Assume a and size exist and do not need to be declared.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Declare and define a function called findMin that has parameters of an int array named array and an int named size. findMin returns an int equal to the minimum value in the array (e.g., the return value is less than or equal to all the other values in the array). <climits> has been included which gives you access to INT_MIN and INT_MAX.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+________________
+
+
+3. Declare and define a class named Person.
+   1. It has private member variables int age and double height
+   2. It has public member functions
+      1. getAge (no parameters, returns an int)
+      2. incrementAge (no return value or parameters)
+      3. setHeight (no return value, a double parameter)
+      4. getHeight (double return value, no parameters)
+   3. It has a two argument constructor that has int and double parameters to set age and height.
+   4. Do the declaration and definition in the same code block {}, similar to the Lecture 8  example code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4. When reading input from the console, why would we use cin.get(...) instead of cin >> ?
+
+
+
+
+
+
+
+
+
+
+
+
+5. Label the elements of this class with member functions, member variables, constructor, and destructor. Mark the access modifier of each member.
+ 
+<line of code>                        <element type>                <access modifier>
+class Singleton {
+        int x;                        _________________                _________________
+        double y;                        _________________                _________________
+        Singleton(int, double);        _________________                _________________
+   public:
+        ~Singleton();                _________________                _________________
+        int getX();                        _________________                _________________
+        double getY();                _________________                _________________
+
+
+}
+
+
+6. Circle all of the operators in this expression:
+
+double x = -a + b[3] / c.d % e;
+
+
+7. What would print to the console in this example program?
+#include <iostream>
+void printStuff(int i) {
+        std::cout << "int: " << i << std::endl;
+}
+void printStuff(double d) {
+        std::cout << "double: " << d << std::endl;
+}
+int main() {
+        double x = 3.5;
+        printStuff(x);
+        printStuff(4);
+        printStuff(2.0);
+        return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   8. What would print to the console in this example program?
+#include <iostream>
+void increment1(int i) {
+    i = i + 1;
+}
+void increment2(int& i) {
+    i = i + 1;                                                                                                                                                                              
+}
+int main() {
+    int x = 2;
+    std::cout << x << std::endl;
+    increment1(x);
+    std::cout << x << std::endl;
+    increment2(x);
+    std::cout << x << std::endl;
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+   9. What would print to the console in this code snippet?
+    int i = 0;
+    while (i < 10) {
+        ++i;
+        if (i % 2 == 0) {
+            continue;                                                                                                                                                                       
+        }   
+        std::cout << i << ", ";
+    }
+
+
+
+
+
+
+
+
+
+
+   10. What access modifier would allow any part of a program to access a class member?
+
+
+
+
+   11. What is the difference between a class and an object?
+
+
+
+
+   12. What is the main difference between the members of a class and a struct?
+
+
+
+
+
+
+
+
+
+
+   13. Which of the following is valid C++ code?
+   1. int ++x = 3;
+   2. int x = 3; ++x;
+   3. 3 = int x; ++x;
+   4. ++x; int x = 3;
+
+
+   14. What type of program is g++? Briefly describe what g++ does (1 sentence).
+
+
+
+
+
+
+   15. Assume this array has been declared: int a[] = {55, 43, 19, 90}
+What would you see in the console after each of these lines of code have been run?
+      1. cout << a[0] << endl;
+
+
+      2. cout << a[3] << endl;
+
+
+      3. cout << a[4] << endl;
