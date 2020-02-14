@@ -22,6 +22,10 @@ int Rectangle::getArea() {
     return width * height;
 }
 
+int Rectangle::getNumRectangles() {
+    return numRectangles;
+}
+
 #ifdef DEBUG
 int main() {
     Rectangle rect;

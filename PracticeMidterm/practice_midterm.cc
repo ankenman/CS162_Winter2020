@@ -49,6 +49,7 @@ class Midterm {
 // The output should be formatted like this for str = "aabccc":
 // a: 2, b: 1, c:3
 // You do not need a line break.
+// partial credit subjective
 void print_abc_count(const char str[]) {
     // TODO: implement this function
 }
