@@ -4,6 +4,7 @@ using namespace std;
 void leak0() {
     int *x = new int(5);
     cout << "Address: " << x << "\nData: " << *x << endl;
+    //delete(x); // Uncomment to fix leak
 }
 
 void leak1() {
@@ -15,7 +16,7 @@ void leak1() {
     }
     cout << endl;
     delete[](array);
-    array[0] = 0;
+    array[0] = 0; // Move this up one line to fix bad access
 }
 
 double* leak2a(int size) {
@@ -31,12 +32,13 @@ void leak2b(double *d, int size) {
         cout << d[i] << ", ";
     }
     cout << endl;
+    //delete[](d); //Uncomment to fix leak
 }
 
 int main() {
     leak0();
-//    leak1();
-//    double *d = leak2a(10);
-//    leak2b(d, 10);
+    leak1();
+    double *d = leak2a(10);
+    leak2b(d, 10);
     return 0;
 }
