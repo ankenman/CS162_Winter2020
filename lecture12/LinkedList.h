@@ -1,5 +1,5 @@
-#include <iostream>
-using namespace std;
+#ifndef LINKED_LIST_H
+#define LINKED_LIST_H
 
 class LinkedList {
     public:
@@ -17,4 +17,4 @@ class LinkedList {
         Node *head;
 };
 
-
+#endif
