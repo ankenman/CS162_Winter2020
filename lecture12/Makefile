@@ -1,4 +1,4 @@
-linkedlist: LinkedList.o main.o
+list: LinkedList.o main.o
 	g++ main.o LinkedList.o -o list
 
 LinkedList.o: LinkedList.h LinkedList.cc
@@ -6,6 +6,9 @@ LinkedList.o: LinkedList.h LinkedList.cc
 
 main.o: main.cc LinkedList.h
 	g++ -c main.cc
+
+run: list
+	./list
 
 clean:
 	rm *.o list
