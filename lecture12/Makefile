@@ -1,11 +1,11 @@
 list: LinkedList.o main.o
-	g++ main.o LinkedList.o -o list
+	g++ -g main.o LinkedList.o -o list
 
 LinkedList.o: LinkedList.h LinkedList.cc
-	g++ -c LinkedList.cc
+	g++ -g -c LinkedList.cc
 
 main.o: main.cc LinkedList.h
-	g++ -c main.cc
+	g++ -g -c main.cc
 
 run: list
 	./list
