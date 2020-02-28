@@ -1,12 +1,18 @@
 #include "LinkedList.h"
 
 LinkedList::LinkedList() {
+    head = new Node();
+    head->next = nullptr;
 }
 
 LinkedList::~LinkedList() {
 }
 
 void LinkedList::pushFront(double data) {
+    Node *newNode = new Node();
+    newNode->data = data;
+    newNode->next = head->next;
+    head->next = newNode;
 }
 
 double LinkedList::popFront() {
@@ -14,29 +20,21 @@ double LinkedList::popFront() {
 }
 
 void LinkedList::printList() {
+    cout << "[ ";
+    Node *currentNode = head->next;
+    while (currentNode != nullptr) {
+        cout << currentNode->data << ' ';
+        currentNode = currentNode->next;
+    }
+    cout << "]";
 }
 
 size_t LinkedList::getSize() {
-    return 0;
-}
-
-int main() {
-    LinkedList ll;
-    cout << "\n**********************\nTesting Empty List\n**********************\n";
-    cout << "Empty list size: " << ll.getSize() << "\nEmpty list elements (Expecting [ ]): ";
-    ll.printList();
-
-    cout << "\n\n**********************\nTesting pushFront(12.5)\n**********************\n";
-    ll.pushFront(12.5);
-    cout << "Expecting size of 1: " << ll.getSize() << "\nExpecting [ 12.5 ]: ";
-    ll.printList();
-
-    cout << "\n\n**********************\nTesting popFront()\n**********************\n";
-    double popElement = ll.popFront();
-    cout << "Expecting to pop 12.5: " << popElement << endl;
-    cout << "Expecting size 0: " << ll.getSize() << "\nExpecting empty list ([ ]): ";
-    ll.printList();
-
-    cout << endl;
-    return 0;
+    size_t size = 0;
+    Node *currentNode = head->next;
+    while (currentNode != nullptr) {
+        ++size;
+        currentNode = currentNode->next;
+    }
+    return size;
 }
